@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu+Mono&display=swap");
+
+:root {
+    --primary-color: #ff686b;
+    --secondary-color: #84dcc6;
+
+    --bg-color: #FFFFFF;
+
+    --tertiary-color: #A5FFD6;
+
+    --primary-text: #FFFFFF;
+    --secondary-text: #ffa69e;
+
+    --misc-text: #1A1A1A;
+
+    --border-color: #747070;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {    
+    background-color: var(--bg-color);
+}
+
+.form-container {
+    min-height: 100vh;
+    flex-direction: column;
+    width: calc(100% - 900px);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.input-container {
+    padding: 40px;
+    /* border: 1px solid var(--primary-color); */
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px var(--primary-color);    
+}
+
+.form-group {        
+    margin: 10px;    
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.input-fields {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-text);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-auth {
+    background-color: var(--primary-color);
+}
+
+.btn-auth:hover {
+    background-color: var(--secondary-text);
+    transition: 1s;
+}
+
+.message {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        flex-direction: row;        
+        width: 100%;
+    }
+
+    .input-container {
+        box-shadow: none;
+    }
+}
