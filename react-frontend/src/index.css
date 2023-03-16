@@ -110,7 +110,95 @@ label {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+#defaultLayout {
+    display: grid;
+    grid-template-columns: 1fr 4fr;    
+}
+
+.content {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--border-color);
+}
+
+aside {
+    background-color: var(--primary-color);
+    padding: 10px;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+main {
+    padding: 30px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;    
+}
+
+th {
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--primary-text);
+}
+
+td {
+    padding: 5px;
+}
+
+.btn-add {    
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;    
+}
+
+aside ul li {
+    padding: 10px;
+    background-color: var(--secondary-text);    
+    font-weight: 500;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.btn-edit {    
+    background-color: var(--misc-text);
+    text-decoration: none;
+    margin-right: 5px;
+    padding: 7px 10px;
+    font-weight: 500;    
+}
+
+.btn-delete {
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-logout {
+    padding: 0;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1100px) {
     .form-container {
         flex-direction: row;        
         width: 100%;

@@ -4,14 +4,21 @@ const StateContext = createContext({
     user: null,
     token: null,
     setUser: () => {},
-    setToken: () => {}
+    setToken: () => {},
+    setMessage: () => {}
 })
 
 export const ContextProvider = ({children}) => {
-    const [user, setUser] = useState({
-        name: 'John Doe'
-    })
+    const [user, setUser] = useState({})
+    const [message, _setMessage] = useState('')
     const [token, _setToken] = useState(localStorage.getItem('ACCESS_TOKEN'))
+
+    const setMessage = (message) => {
+        _setMessage(message)
+        setTimeout(() => {
+            _setMessage('')
+        }, 3000)
+    }
 
     const setToken = (token) => {
         _setToken(token)
@@ -27,7 +34,9 @@ export const ContextProvider = ({children}) => {
             user,
             token,
             setUser,
-            setToken
+            setToken,
+            message,
+            setMessage,
         }}>
             {children}
 
